@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/Login.css";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +33,13 @@ const Login = () => {
         setError(response.data.message);
       }
     } catch (error) {
-      if (error.response.data.message) setError(error.response.data.message);
+      if (error.response.data.message.includes("password")) {
+        setError(
+          "Password must be 3 to 30 characters long and contain only letters and numbers."
+        );
+      } else {
+        setError(error.response.data.message);
+      }
     }
   };
 
