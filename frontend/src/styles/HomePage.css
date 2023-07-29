@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 20px;
+}
+.tabs {
+	display: flex;
+	position: relative;
+	background-color: #fff;
+	padding: 0.4rem;
+	border-radius: 99px; 
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 190px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	border-radius: 99px; 
+	cursor: pointer;
+	transition: color 0.15s ease-in;
+}
+
+
+.selected-tab {
+	color:#185ee0;
+  }
+  
+
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}
